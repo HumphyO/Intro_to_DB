@@ -24,13 +24,16 @@ CREATE TABLE Customers(
 
 CREATE TABLE Orders(
     order_id INT PRIMARY KEY
-    customer_id (Foreign Key referencing Customers table)
+    customer_id INT
     order_date DATE
+    FOREIGN KEY (order_id) REFERENCES Customers (customer_id)
 );
 
 CREATE TABLE Order_Details(
     orderdetail_id INT PRIMARY KEY
-    order_id (Foreign Key referencing Orders table)
-    book_id (Foreign Key referencing Books table)
+    order_id INT
+    book_id INT
     quantity DOUBLE
+    FOREIGN KEY (order_id) REFERENCES Orders (orderr_id)
+    FOREIGN KEY (book_id) REFERENCES Books (book_id)
 );
