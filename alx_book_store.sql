@@ -37,3 +37,5 @@ CREATE TABLE Order_Details(
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
+
+

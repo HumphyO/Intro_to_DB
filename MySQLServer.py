@@ -8,10 +8,10 @@ def create_database(lhost, user, password, database_name):
         )
 
         cursor = cnx.cursor()
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {alx_book_store}")
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store")
         cnx.commit()
 
-        print(f"Database '{alx_book_store}' created succesfully!")
+        print(f"Database 'alx_book_store' created succesfully!")
 
     except mysql.connector.Error as err:
         print(f"Error: {err}")
